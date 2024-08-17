@@ -10,6 +10,7 @@ public class ThreadCreationBasics {
                 System.out.println("current thread priority is: "+ Thread.currentThread().getPriority());
             }
         });
+
         thread.setName("New worker Thread");
         thread.setPriority(Thread.MAX_PRIORITY);
         System.out.println("Before thread creation: "+ Thread.currentThread().getName());

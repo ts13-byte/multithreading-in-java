@@ -42,7 +42,7 @@ class FactorialThread extends Thread{
 }
 public class ThreadCoordination {
     public static void main(String[] args) throws InterruptedException {
-        List<Long> inputNumbers= Arrays.asList(1000000000000L,345L,3545L,234L,4665L,23L,5566L);
+        List<Long> inputNumbers= Arrays.asList(2L,345L,3545L,234L,4665L,23L,5566L);
 
         List<FactorialThread> threads=new ArrayList<>();
 

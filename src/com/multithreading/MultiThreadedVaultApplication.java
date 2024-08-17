@@ -10,9 +10,10 @@ class Vault{
     private int password;
     public Vault(int password){
         this.password=password;
+        System.out.println("password :" + password);
     }
     public boolean correctGuess(int guess) throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(5);
         return this.password==guess;
     }
 }
@@ -66,7 +67,7 @@ abstract class HackerThread extends Thread{
             for(int guess=MAX_PASSWORD ; guess>=0 ; guess--){
                 try {
                     if(vault.correctGuess(guess)){
-                        System.out.println(this.getName() + "guessed the password" + guess);
+                        System.out.println(this.getName() + " guessed the password " + guess);
                         System.exit(0);
                     }
                 } catch (InterruptedException e) {
@@ -81,7 +82,7 @@ abstract class HackerThread extends Thread{
         public void run() {
             for (int i=10 ; i>=0; i--){
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
